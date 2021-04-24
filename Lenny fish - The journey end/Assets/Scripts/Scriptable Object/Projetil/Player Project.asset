@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e638def22c4564f814ae8c1d40a86f, type: 3}
+  m_Name: Player Project
+  m_EditorClassIdentifier: 
+  lifeTime: 1
+  distanceTouch: 2
+  whatIsSolid:
+    serializedVersion: 2
+    m_Bits: 64
+  damage: 3
+  speed: 8
+  size: 0.8
+  explodes: 0
+  fire: 0
+  poison: 0
+  destroyEffect: {fileID: 1055443217909569288, guid: a18a6a39b4c789d479e72211498c2859, type: 3}
