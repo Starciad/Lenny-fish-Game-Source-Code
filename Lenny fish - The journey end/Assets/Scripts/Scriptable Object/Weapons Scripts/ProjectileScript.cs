@@ -5,10 +5,12 @@ using UnityEngine;
 public class ProjectileScript : MonoBehaviour
 {
     public ProjectObject projectile;
+
     void Start()
     {
         Invoke("DestroyProjectile", projectile.lifeTime);
         transform.localScale = new Vector3(projectile.size, projectile.size, projectile.size);
+        projectile.distanceTouch = projectile.size;
     }
 
     void Update()

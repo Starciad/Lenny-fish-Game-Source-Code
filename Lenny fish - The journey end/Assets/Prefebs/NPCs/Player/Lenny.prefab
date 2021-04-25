@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7058660409031633063}
   m_Layer: 0
   m_Name: Lenny
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 6450075305092012154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.75, y: 0.04, z: 0}
-  m_LocalScale: {x: 3.1351, y: 3.1351, z: 3.1351}
+  m_LocalScale: {x: 1.9727741, y: 1.9727741, z: 1.9727741}
   m_Children:
   - {fileID: 7781931833515641238}
   m_Father: {fileID: 0}
@@ -165,7 +165,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -176,7 +176,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67, y: 0.47}
+  m_Size: {x: 0.39, y: 0.29}
   m_EdgeRadius: 0
 --- !u!50 &7058660409031633063
 Rigidbody2D:
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 1
+  delayShots: 0
   startDelayshots: 0.5
   projectPrefab: {fileID: 8646256100269996762, guid: 5aaaa1124caff4d4dbbe66fca167e374, type: 3}
   effectShoot: {fileID: 4384124655678733909, guid: 2537f57690ba8c34db10325f67d89a5f, type: 3}

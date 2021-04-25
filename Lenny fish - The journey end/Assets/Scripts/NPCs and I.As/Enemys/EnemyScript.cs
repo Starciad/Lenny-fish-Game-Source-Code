@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public int health;
-    public GameObject deathEffect;
-    public GameObject explosion;
+    public EnemyObject enemyConfig;
 
-    private void Update()
+    void Start()
     {
-        if (health <= 0)
-        {
-            //Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
+        enemyConfig.life = enemyConfig.maxLife;
+    }
+
+    void Update()
+    {
+
     }
 
     public void TakeDamage(int damage)
     {
         //camAnim.SetTrigger("shake");
         //Instantiate(explosion, transform.position, Quaternion.identity);
-        health -= damage;
+        enemyConfig.life -= damage;
+        if (enemyConfig.life <= 0)
+        {
+            //Instantiate(enemyConfig.deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

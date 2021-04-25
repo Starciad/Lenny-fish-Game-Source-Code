@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Player Project
   m_EditorClassIdentifier: 
   lifeTime: 1
-  distanceTouch: 2
+  distanceTouch: 0.5
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64
   damage: 3
-  speed: 8
-  size: 0.8
+  speed: 7
+  size: 0.5
   explodes: 0
   fire: 0
   poison: 0

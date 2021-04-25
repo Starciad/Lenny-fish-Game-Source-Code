@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1739653381408520823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739653381408520821}
+  - component: {fileID: 1739653381408520822}
+  m_Layer: 0
+  m_Name: GeneratorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739653381408520821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739653381408520823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.408621, y: -5.4839478, z: -14.797772}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739653381408520822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739653381408520823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3fb3b584ad9b341abdcd131d7a47eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPositionX: 0
+  startPositionY: 0
+  ChunksMap:
+  - {fileID: 4900000, guid: 78eafeb9407624141853dc83c0c6fd13, type: 3}
+  - {fileID: 4900000, guid: 24906aafad91f9240bfa76c731a37e03, type: 3}
+  - {fileID: 4900000, guid: 00e25707d2ab6a2429b6dce55a868337, type: 3}
+  - {fileID: 4900000, guid: 1886d188948e4204a927a3741f8f8283, type: 3}
+  - {fileID: 4900000, guid: ad8f47e34e3f89f48a9b385fbc831df0, type: 3}
+  - {fileID: 4900000, guid: f4880f488175ac84a99fe93005fc6992, type: 3}
+  - {fileID: 4900000, guid: ddfbe179d33767044b8a5ebd6310b8d5, type: 3}
+  - {fileID: 4900000, guid: 7b89e02d8d4c75048827011e2d3afb47, type: 3}
+  - {fileID: 4900000, guid: 6b4ce83ac0fccf44ba6c067624c701f3, type: 3}
+  - {fileID: 4900000, guid: a5a88e8c56165b444842df787b519317, type: 3}
+  - {fileID: 4900000, guid: e7d027a9e8da69144bd95eea3749c408, type: 3}
+  dirt: {fileID: 11400000, guid: c7ed66cb76f540546ba09b658574ea4c, type: 2}
+  tileMap: {fileID: 0}

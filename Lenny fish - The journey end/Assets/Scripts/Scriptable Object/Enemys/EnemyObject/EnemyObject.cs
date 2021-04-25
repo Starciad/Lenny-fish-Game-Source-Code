@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "new enemy", menuName = "Scriptable Objects/NPCs/new enemy", order = 1)]
 public class EnemyObject : ScriptableObject
 {
     [Header("Basic infos")]
@@ -18,4 +19,7 @@ public class EnemyObject : ScriptableObject
     [Header("Projectile")]
     public bool shoot;
     public GameObject projectile;
+
+    [Header("Effects")]
+    public GameObject deathEffect;
 }
