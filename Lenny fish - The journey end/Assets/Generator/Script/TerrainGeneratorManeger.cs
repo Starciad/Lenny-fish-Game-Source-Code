@@ -17,52 +17,67 @@ public class TerrainGeneratorManeger : MonoBehaviour
     public TileBase dirt;
     public Tilemap tileMap;
 
+    [Header("Config")]
+    public GameObject[] inimigos;
+    public GameObject itemSpawn;
+
+    [Obsolete]
     void Start()
     {
-        int number = Random.Range(0, ChunksMap.Length);
-        var pos = new Vector3Int(0, 0, 0);
+        
+    }
 
-
-        chunksMap = ChunksMap[number].ToString();
-        linhas = chunksMap.Split('\n');
-
-        pos.y = (int)startPositionY;
-        foreach (string linhas in linhas)
+    [Obsolete]
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            caracteres = linhas.ToCharArray();
-            foreach (char letras in caracteres)
+            int number = Random.Range(0, ChunksMap.Length);
+            var pos = new Vector3Int(0, 0, 0);
+
+
+            chunksMap = ChunksMap[number].ToString();
+            linhas = chunksMap.Split('\n');
+
+            pos.y = (int)startPositionY;
+            foreach (string linhas in linhas)
             {
-                switch (letras)
+                caracteres = linhas.ToCharArray();
+                foreach (char letras in caracteres)
                 {
-                    case '#':
-                        Debug.Log("Pisos");
-                        tileMap.SetTile(pos, dirt);
-                        break;
+                    switch (letras)
+                    {
+                        case '#':
+                            //Debug.Log("Pisos");
+                            tileMap.SetTile(pos, dirt);
+                            break;
 
-                    case ' ':
-                        Debug.Log("Vazio");
-                        break;
+                        case ' ':
+                            //Debug.Log("Vazio");
+                            break;
+
+                        case 'E':
+                            //Debug.Log("Inimigo");
+                            Instantiate(inimigos[Random.RandomRange(0, inimigos.Length)], pos, Quaternion.identity);
+                            break;
 
 
-                    case 'E':
-                        Debug.Log("Inimigo");
-                        tileMap.SetTile(pos, dirt);
-                        break;
+                        case 'H':
+                            //Debug.Log("Decoração");
+                            break;
 
-
-                    case 'H':
-                        Debug.Log("Decoração");
-                        break; 
-                    
-                    case '1':
-                        Debug.Log("Loot");
-                        break;
+                        case '1':
+                            //Debug.Log("Loot");
+                            Instantiate(itemSpawn, pos, Quaternion.identity);
+                            break;
+                    }
+                    pos.x++;
                 }
-                pos.x++;
+                pos.x = (int)startPositionX;
+                pos.y--;
             }
-            pos.x = (int)startPositionX;
-            pos.y--;
         }
+        Destroy(gameObject);
     }
 }
 

@@ -8,6 +8,9 @@ public class EnemyObject : ScriptableObject
     [Header("Basic infos")]
     public string enemyName;
 
+    [Header("IA")]
+    public float rangeVision;
+
     [Header("Status")]
     public int life;
     public int maxLife;
